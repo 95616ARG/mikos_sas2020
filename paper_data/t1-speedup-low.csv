@@ -1,0 +1,4 @@
+benchmark,walltime (s)-ikos,memory (MB)-ikos,walltime (s)-mikos,memory (MB)-mikos,memreduction,speedup
+SVC/ldv-challenges/linux-3.8-rc1-32_7a-drivers--usb--core--usbcore.ko-ldv_main11_sequence_infinite_withcheck_stateful_false-unreach-call.cil.out.i,42.6323555,541.454336,48.91592522,121.888768,0.2251136613,0.8715434759999999
+SVC/ldv-challenges/linux-3.8-rc1-32_7a-drivers--usb--core--usbcore.ko-ldv_main0_sequence_infinite_withcheck_stateful_true-unreach-call.cil.out.i,54.30904193,3025.113088,61.78011017,189.743104,0.06272264821000001,0.8790700079000001
+SVC/ldv-challenges/linux-3.8-rc1-32_7a-drivers--usb--core--usbcore.ko-ldv_main1_sequence_infinite_withcheck_stateful_true-unreach-call.cil.out.i,42.83630111,456.802304,47.72813338,119.201792,0.2609483161,0.8975063151

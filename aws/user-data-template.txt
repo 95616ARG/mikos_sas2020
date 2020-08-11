@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# All instances run this script on boot to do the experiment.
+# Each instance is assigned its batch number and configuration number.
+BATCH={config}-{batch}
+BUCKET1=s3://{bucket1}
+BUCKET2=s3://{bucket2}
+
+export PATH="/home/ubuntu/mikos/build/run/bin:$PATH"
+export PYTHONPATH="/home/ubuntu/mikos:$PYTHONPATH"
+
+cd /tmp
+
+# Download the input from S3 BUCKET1
+aws s3 cp $BUCKET1/batches/$BATCH.xml bench.xml
+
+# Run benchexec
+benchexec bench.xml
+
+# Copy the results
+mkdir tmp
+mv results tmp/$BATCH
+aws s3 cp --recursive tmp $BUCKET2
+
+poweroff

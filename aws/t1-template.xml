@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.18//EN" "https://www.sosy-lab.org/benchexec/benchmark-1.18.dtd">
+<benchmark tool="tools.ikos" walltimelimit="3600 s" memlimit="64 GB" threads="1">
+    <option name="-q"/>
+    <option name="-w"/>
+    <option name="--display-times">no</option>
+    <option name="--display-summary">no</option>
+    <option name="--progress">no</option>
+    <option name="--proc">inter</option>
+
+    <option name="-a">prover</option>
+    <option name="-d">var-pack-dbm-congruence</option>
+
+    <rundefinition name="t1-ikos">
+    </rundefinition>
+    <rundefinition name="t1-mikos">
+      <option name="--memopt"/>
+    </rundefinition>
+
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+    <tasks>
+      <include>/home/ubuntu/mikos/benchmarks/test.c</include>
+    </tasks>
+{tasks}
+</benchmark>
