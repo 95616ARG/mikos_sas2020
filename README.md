@@ -442,3 +442,11 @@ Number of benchmarks in quartile:  d   107
 425      64000.000000
 Figures saved to "data/{t1, t2}-hist-[a-d].png".
 ```
+
+## People
+- [Aditya V. Thakur](https://thakur.cs.ucdavis.edu/) can be reached at
+  [avthakur@ucdavis.edu](mailto:avthakur@ucdavis.edu).
+- Arnaud J. Venet can be reached at
+  [ajv@fb.com](mailto:ajv@fb.com).
+- [Sung Kook Kim](https://skkeem.github.io/) can be reached at
+  [sklkim@ucdavis.edu](mailto:sklkim@ucdavis.edu).
