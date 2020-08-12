@@ -21,6 +21,6 @@
       <include>../benchmarks/test.c</include>
     </tasks>
     <tasks>
-      <includesfile>../benchmarks/osssub.set</includesfile>
+      <includesfile>../benchmarks/oss-sub.set</includesfile>
     </tasks>
 </benchmark>
