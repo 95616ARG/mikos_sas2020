@@ -20,6 +20,17 @@ apt-get install -y cmake libgmp-dev \
    libsqlite3-dev libz-dev libedit-dev llvm-9 llvm-9-dev llvm-9-tools clang-9 \
    texlive dvipng texlive-latex-extra cm-super
 
+# Pqos wrapper
+git clone https://github.com/intel/intel-cmt-cat.git
+pushd intel-cmt-cat
+make install
+popd
+
+git clone https://gitlab.com/sosy-lab/software/pqos-wrapper.git
+pushd pqos-wrapper
+python3 setup.py install
+popd
+
 # BenchExec
 wget https://github.com/sosy-lab/benchexec/releases/download/2.5/benchexec_2.5-1_all.deb
 apt-get install -y --install-recommends ./benchexec_2.5-1_all.deb
