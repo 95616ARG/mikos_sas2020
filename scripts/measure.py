@@ -4,6 +4,9 @@ import subprocess
 import sys
 
 if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        print("Usage:", sys.argv[0], "<benchmark>", "<memory limit in GB>")
+        sys.exit(1)
     bench = sys.argv[1]
     mem = sys.argv[2]
     a = 'boa'
@@ -13,7 +16,7 @@ if __name__ == '__main__':
         d = 'var-pack-dbm-congruence'
 
     print('Running IKOS...')
-    process = subprocess.Popen(['runexec', '--quiet', '--walltimelimit=3600', '--memlimit=%s000000000' % mem, '--output=/dev/null', '--', 'ikos', '-q', '-w', '--display-time=no', '--display-summary=no', '--progress=no', '--proc=inter', '-a=%s' % a, '-d=%s' % d, bench], stdout=subprocess.PIPE)
+    process = subprocess.Popen(['runexec', '--no-container', '--quiet', '--walltimelimit=3600', '--memlimit=%s000000000' % mem, '--output=/dev/null', '--', 'ikos', '-q', '-w', '--display-time=no', '--display-summary=no', '--progress=no', '--proc=inter', '-a=%s' % a, '-d=%s' % d, bench], stdout=subprocess.PIPE)
     result = process.communicate()[0].decode('utf-8').split('\n')
     for line in result:
         if line.startswith('returnvalue'):
@@ -27,7 +30,7 @@ if __name__ == '__main__':
             im = int(line.split('=')[1][:-1])
 
     print('Running MIKOS...')
-    process = subprocess.Popen(['runexec', '--quiet', '--walltimelimit=3600', '--memlimit=%s000000000' % mem, '--output=/dev/null', '--', 'mikos', '-q', '-w', '--display-time=no', '--display-summary=no', '--progress=no', '--proc=inter', '-a=%s' % a, '-d=%s' % d, bench], stdout=subprocess.PIPE)
+    process = subprocess.Popen(['runexec', '--no-container', '--quiet', '--walltimelimit=3600', '--memlimit=%s000000000' % mem, '--output=/dev/null', '--', 'mikos', '-q', '-w', '--display-time=no', '--display-summary=no', '--progress=no', '--proc=inter', '-a=%s' % a, '-d=%s' % d, bench], stdout=subprocess.PIPE)
     result = process.communicate()[0].decode('utf-8').split('\n')
     for line in result:
         if line.startswith('returnvalue'):
