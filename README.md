@@ -40,6 +40,8 @@ To run MIKOS, first run the following command to run the docker image.
 $ ./docker_run.sh
 ```
 
+Once you are in the docker container, you become a `root` user as indicated by `#` in the following command lines.
+
 Then, run the following to build `mikos`:
 ```
 # ./setup.sh
