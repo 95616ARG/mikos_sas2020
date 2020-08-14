@@ -45,7 +45,7 @@ Then, run the following to build `mikos`:
 # ./setup.sh
 ```
 
-Once the above is done, You can run MIKOS with a command `mikos`.
+Once the above is done, you can run MIKOS with a command `mikos`.
 
 To test that MIKOS works, run the following to perform buffer overflow analysis
 with interval domain on `test.c`.
@@ -142,7 +142,7 @@ Reduced product of DBM with variable packing and congruence is used for task T1.
 The following command performs the analysis on SVC benchmark, `linux-3.12-rc1.tar.xz-144_2a-drivers--staging--media--lirc--lirc_imon.ko-entry_point_false-unreach-call.cil.out.i`.
 
 ```
-# mikos -a=prover -d=var-pack-dbm-congruence ./benchmarks/SVC/ldv-linux-3.12-rc1/linux-3.12-rc1.tar.xz-144_2a-drivers--staging --media--lirc--lirc_imon.ko-entry_point_false-unreach-call.cil.out.i
+# mikos -a=prover -d=var-pack-dbm-congruence ./benchmarks/SVC/ldv-linux-3.12-rc1/linux-3.12-rc1.tar.xz-144_2a-drivers--staging--media--lirc--lirc_imon.ko-entry_point_false-unreach-call.cil.out.i
 ```
 
 ```
@@ -233,9 +233,7 @@ The script takes two arguments. Task is determined by the benchmark used.
 
 For example, the following measures the MRR and speedup of performing task T1 on an SVC benchmark with 1 GB memory limit.
 ```
-$ ./scripts/measure.py ./benchmarks/SVC/ldv-linux-3.12-rc1/linux-3.12-rc1.tar.xz-144_2a-drivers--staging--media--lirc--lirc_imon.
-
-ko-entry_point_false-unreach-call.cil.out.i 1
+# ./scripts/measure.py ./benchmarks/SVC/ldv-linux-3.12-rc1/linux-3.12-rc1.tar.xz-144_2a-drivers--staging--media--lirc--lirc_imon.ko-entry_point_false-unreach-call.cil.out.i 1
 ```
 
 It reports memory reduction of 0.08 and a speedup of 1.28.
@@ -296,7 +294,7 @@ These are the benchmarks in Table 2 and 4.
 Figures and tables generated using this data will be different from those in the paper.
 
 ```
-# benchexec xml/t1-sub.xml; benchexec xml/t2-sub.xml
+# benchexec --no-container xml/t1-sub.xml; benchexec --no-container xml/t2-sub.xml
 # ./scripts/csv.sh
 ```
 
@@ -305,7 +303,7 @@ Figures and tables generated using this data will be different from those in the
 The following command reproduce all data.
 
 ```
-# benchexec xml/t1.xml; benchexec xml/t2.xml
+# benchexec --no-container xml/t1.xml; benchexec --no-container xml/t2.xml
 # ./scripts/csv.sh
 ```
 
