@@ -292,6 +292,7 @@ a subset of benchmarks that could be analyzed in a reasonable amount of time.
 These are the benchmarks in Table 2 and 4.
 
 Figures and tables generated using this data will be different from those in the paper.
+If there is a `results` folder from a previous run, remove it before running the command.
 
 ```
 # benchexec --no-container xml/t1-sub.xml; benchexec --no-container xml/t2-sub.xml
@@ -301,6 +302,7 @@ Figures and tables generated using this data will be different from those in the
 #### Reproducing data for all benchmarks on a local machine (roughly takes 234 hours, 64 GB memory)
 
 The following command reproduce all data.
+If there is a `results` folder from a previous run, remove it before running the command.
 
 ```
 # benchexec --no-container xml/t1.xml; benchexec --no-container xml/t2.xml
