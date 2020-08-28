@@ -1,15 +1,8 @@
 #!/usr/bin/env python3
-import subprocess
-import time
-import os
-import glob
 import pandas as pd
-import datetime
-import math
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-import sys
-import numpy as np
+mpl.use('Agg')
 import scipy.stats
 import scipy.stats.mstats
 
