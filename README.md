@@ -2,6 +2,23 @@
 
 This is the software artifact that accompanies the paper "Memory-Efficient Fixpoint Computation" by Sung Kook Kim, Arnaud J. Venet, and Aditya V. Thakur.
 
+**"Memory-Efficient Fixpoint Computation"**
+Preprint: [https://arxiv.org/abs/2009.05865](https://arxiv.org/abs/2009.05865).
+```
+@article{DBLP:journals/corr/abs-2009-05865,
+  author    = {Sung Kook Kim and
+               Arnaud J. Venet and
+               Aditya V. Thakur},
+  title     = {Memory-Efficient Fixpoint Computation},
+  journal   = {CoRR},
+  volume    = {abs/2009.05865},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2009.05865},
+  archivePrefix = {arXiv},
+  eprint    = {2009.05865},
+}
+```
+
 This consists of our memory efficient abstract interpreter MIKOS, benchmarks used in the experiments, and scripts to reproduce experiment results in the paper.
 
 MIKOS is based on [IKOS](https://github.com/NASA-SW-VnV/ikos), an abstract interpretation
